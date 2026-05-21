@@ -1,0 +1,306 @@
+# Instincts generated from https://github.com/Rhyoss/apphosting-adapters
+# Generated: 2026-05-21T20:38:33.310Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: apphosting-adapters-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Commit Length
+
+## Action
+
+Write moderate-length commit messages (~64 characters)
+
+## Evidence
+
+- Average commit message length: 64 chars
+- Based on 1 commits
+
+---
+id: apphosting-adapters-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: apphosting-adapters-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: apphosting-adapters-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: apphosting-adapters-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: apphosting-adapters-workflow-dependency-update-across-multiple-packages
+trigger: "when doing dependency update across multiple packages"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Workflow Dependency Update Across Multiple Packages
+
+## Action
+
+Follow the dependency-update-across-multiple-packages workflow:
+1. Identify outdated dependencies in all package.json files.
+2. Update the version numbers in package.json files for each affected package/starter.
+3. Regenerate or update corresponding package-lock.json files.
+4. Commit all changed package.json and package-lock.json files together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: */package.json, */package-lock.json, packages/*/package.json
+
+---
+id: apphosting-adapters-instinct-file-naming
+trigger: "When creating a new file in the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct File Naming
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: camelCase
+
+---
+id: apphosting-adapters-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Function Naming
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: apphosting-adapters-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: apphosting-adapters-instinct-constant-naming
+trigger: "When defining a new constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: apphosting-adapters-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: apphosting-adapters-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: named
+
+---
+id: apphosting-adapters-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: apphosting-adapters-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Git Commit Format
+
+## Action
+
+Use a freeform message without a strict prefix, typically under 70 characters
+
+## Evidence
+
+- commits.type: freeform
+- commits.prefixes: []
+- commits.averageLength: 64
+- Example: 'Bump the npm_and_yarn group across 9 directories with 10 updates'
+
+---
+id: apphosting-adapters-instinct-dependency-update-workflow
+trigger: "When dependencies need to be updated across multiple packages and starter templates"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Rhyoss/apphosting-adapters
+---
+
+# Apphosting Adapters Instinct Dependency Update Workflow
+
+## Action
+
+Identify outdated dependencies in all package.json files, update version numbers, regenerate or update package-lock.json files, and commit all changes together
+
+## Evidence
+
+- workflow: dependency-update-across-multiple-packages
+- commit sequence and files involved as described in workflow
+
